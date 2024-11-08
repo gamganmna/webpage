@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vietnamese Words</title>
+    <link rel="icon" type="image/png" href="/images/flower.png">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FEFAF9;
+            color: #CBC5C5; /* Default gray color */
+            font-family: 'Times New Roman', Times, serif; /* Set default font */
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-image {
+            height: 50vh;
+            background: linear-gradient(rgba(254, 244, 245, 0.7), rgba(254, 244, 245, 0.7)), url('pinki.jpeg'); /* Use pinki.jpeg as background */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .background-image h1 {
+            font-family: 'Ballet', cursive; /* Keep title in Ballet font */
+            font-size: 3em;
+            color: white;
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .nav_item {
+            flex: 1;
+        }
+
+        a {
+            color: #CBC5C5;
+            text-decoration: none;
+            padding: 18px 35px; /* Larger padding for bigger button size */
+            background-color: #FEF4F5;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: block;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.3em;
+        }
+
+        a:hover {
+            background-color: #CBC5C5;
+            color: #FEF4F5;
+        }
+
+        .content {
+            padding: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .intro-text {
+            font-size: 1.5em; /* Smaller font size for the introduction */
+            margin-bottom: 20px;
+            color: #CBC5C5; /* Keep gray color */
+        }
+
+        .word-section {
+            margin-bottom: 20px;
+        }
+
+        .word-section h2 {
+            font-family: 'Ballet', cursive;
+            font-size: 2em;
+            color: #CBC5C5;
+            margin-bottom: 10px;
+        }
+
+        .word-section p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1em;
+            color: #CBC5C5; /* Keep gray color for the word meanings */
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #CBC5C5;
+            margin: 30px 0;
+        }
+
+        /* Video container */
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image">
+    <header>
+        <h1>Vietnamese Words</h1>
+    </header>
+</div>
+
+<nav>
+    <ul id="nav">
+        <li class="nav_item"><a href="index_nav.html">Home</a></li>
+        <li class="nav_item"><a href="music.html">Music</a></li>
+        <li class="nav_item"><a href="proverbs.html">Proverbs</a></li>
+        <li class="nav_item"><a href="unique_words.html">Unique Words</a></li>
+        <li class="nav_item"><a href="culture.html">Culture</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <p class="intro-text">Explore unique Vietnamese words and expressions that offer insight into the culture, values, and everyday life of Vietnam.</p>
+    
+    <!-- Video Section -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="word.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <hr>
+
+    <div class="word-section">
+        <h2>Người yêu</h2>
+        <p>This term is used to describe a loved one or significant other, capturing a deep sense of affection in Vietnamese relationships.</p>
+    </div>
+
+    <div class="word-section">
+        <h2>Trời ơi</h2>
+        <p>A popular expression that conveys surprise, frustration, or disbelief. It is often used to react to unexpected situations.</p>
+    </div>
+
+    <div class="word-section">
+        <h2>Duyên</h2>
+        <p>This term speaks to the concept of fate or destiny, especially when it brings people together in unique and meaningful ways.</p>
+    </div>
+
+    <hr>
+</div>
+
+&copy; gm
+
+</body>
+</html>

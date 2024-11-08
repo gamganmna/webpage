@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proverbs</title>
+    <link rel="icon" href="vietnam.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #FEFAF9;
+            color: #CBC5C5;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .background-image {
+            position: relative;
+            height: 50vh;
+            background: linear-gradient(rgba(254, 244, 245, 0.7), rgba(254, 244, 245, 0.7)), url('wait.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+        .background-image h1 {
+            font-family: 'Ballet', cursive;
+            font-size: 3em;
+            color: #CBC5C5;
+            margin: 0;
+            text-align: center;
+        }
+
+        
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #nav {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav_item {
+            flex: 1;
+        }
+
+        a {
+            color: #CBC5C5;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #FEF4F5;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #CBC5C5;
+            color: #FEF4F5;
+        }
+
+        
+        .content {
+            padding: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #CBC5C5;
+            margin: 30px 0;
+        }
+
+        
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+
+        
+        .intro-text {
+            font-size: 1.5em;  
+            line-height: 1.5;   
+            text-align: center; 
+            margin: 20px 0;     
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="background-image">
+    <header>
+        <h1>Meaningful Proverbs</h1>
+    </header>
+</div>
+
+
+<nav>
+    <ul id="nav">
+        <li class="nav_item"><a href="index_nav.html">Home</a></li>
+        <li class="nav_item"><a href="music.html">Music</a></li>
+        <li class="nav_item"><a href="proverbs.html">Proverbs</a></li>
+        <li class="nav_item"><a href="unique_words.html">Unique Words</a></li>
+        <li class="nav_item"><a href="culture.html">Culture</a></li>
+    </ul>
+</nav>
+
+
+<div class="content">
+    
+    <p class="intro-text">
+        Proverbs are concise, universal expressions of human experience that offer guidance, humor, and a glimpse into the heart of a language and its people. Join us in discovering the uniqueness of Vietnamese culture...
+    </p>
+
+    <hr>
+
+   
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="proverbs.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <hr>
+
+    <h2>Vietnamese Proverbs</h2>
+    <p>Examples of Vietnamese proverbs and their meanings. What do you think about them?</p>
+    <dl>
+        <dt><strong>"Ăn cỏ non, uống nước suối ăn no mà không biết mình đói"</strong></dt>
+        <dd><p>Translation: <em>"Eating tender grass and drinking pure water, not knowing you’re hungry"</em></p>
+        <p>To be unaware of one’s own needs or situation. This proverb is used when someone is too absorbed in their own activities or problems to assess their own situation.</p></dd>
+        
+        <dt><strong>"Ăn no mới biết đói"</strong></dt>
+        <dd><p>Translation: <em>"Only know you’re hungry after eating"</em></p>
+        <p>This proverb means to only understand the importance of something once you have experienced it yourself.</p></dd>
+        
+        <dt><strong>"Bầu ơi thương lấy bí cò"</strong></dt>
+        <dd><p>Meaning: <em>"Be careful with what you say; it may come back to haunt you in the future."</em></p>
+        <p>This proverb warns against saying things one may regret later.</p></dd>
+        
+        <dt><strong>"Bắt đầu từ đầu"</strong></dt>
+        <dd><p>Meaning: <em>"To take a new approach to achieve success; starting from the beginning"</em></p>
+        <p>This proverb is used when someone needs to start over after trying unsuccessfully to achieve something.</p></dd>
+    </dl>
+</div>
+
+</body>
+</html>

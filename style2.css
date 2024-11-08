@@ -1,0 +1,39 @@
+/* General body styles */
+body {
+    background-color: #FEFAF9; /* Background color */
+    color: #CBC5C5; /* Text color */
+    font-family: Helvetica, sans-serif; /* Main font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation styling */
+nav {
+    text-align: center; /* Center the navigation items */
+    margin-top: 20px; /* Space above the nav */
+}
+
+#nav {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the navigation */
+}
+
+.nav_item {
+    flex: 1; /* Flex-grow for each item */
+}
+
+a {
+    color: #CBC5C5; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Padding for links */
+    background-color: #FEF4F5; /* Background color for links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for hover effects */
+}
+
+a:hover {
+    background-color: #CBC5C5; /* Hover background color */
+    color: #FEF4F5; /* Hover text color */
+}

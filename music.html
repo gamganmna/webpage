@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vietnamese Music</title>
+    <link rel="icon" type="image/png" href="/images/flower.png">
+    <!-- Include Google font Silkscreen and Ballet -->
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FEFAF9;
+            color: #CBC5C5;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-image {
+            height: 50vh;
+            background: linear-gradient(rgba(254, 244, 245, 0.7), rgba(254, 244, 245, 0.7)), url('right.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .background-image h1 {
+            font-family: 'Ballet', cursive;
+            font-size: 3em;
+            color: white;
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .nav_item {
+            flex: 1;
+        }
+
+        a {
+            color: #CBC5C5;
+            text-decoration: none;
+            padding: 18px 40px;
+            background-color: #FEF4F5;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: block;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5em;
+        }
+
+        a:hover {
+            background-color: #CBC5C5;
+            color: #FEF4F5;
+        }
+
+        .content {
+            padding: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+            max-width: 800px;
+            margin: auto;
+            display: none;
+        }
+
+        .singer-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .singer-section img {
+            border-radius: 15px;
+            width: 256px;
+            height: 256px;
+            transition: transform 0.3s;
+        }
+
+        .singer-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .singer-section video {
+            width: 320px;
+            height: 240px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+
+        .singer-section video:hover {
+            transform: scale(1.1);
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #CBC5C5;
+            margin: 30px 0;
+        }
+
+        .famous-artists-header {
+            font-family: 'Silkscreen', cursive;
+            font-size: 5em;
+            color: #FEF4F5;
+            text-align: center;
+            margin-top: 30px;
+            text-shadow: 2px 2px 5px #CBC5C5, -1px -1px 5px #CBC5C5;
+        }
+
+        .click-me {
+            position: absolute;
+            color: white;
+            font-family: 'Ballet', cursive;
+            font-size: 2em;
+            text-align: center;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .click-me:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            width: 256px;
+            height: 256px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image">
+    <header>
+        <h1>Vietnamese Music</h1>
+    </header>
+</div>
+
+<nav>
+    <ul id="nav">
+        <li class="nav_item"><a href="index_nav.html">Home</a></li>
+        <li class="nav_item"><a href="music.html">Music</a></li>
+        <li class="nav_item"><a href="proverbs.html">Proverbs</a></li>
+        <li class="nav_item"><a href="unique_words.html">Unique Words</a></li>
+        <li class="nav_item"><a href="link5.html">Culture</a></li>
+    </ul>
+</nav>
+
+<div class="famous-artists-header">
+    <h2>Famous Artists</h2>
+</div>
+
+<!-- The image that triggers the video reveal -->
+<div class="image-container">
+    <img src="img/Sunsets.jpeg" alt="Click Me Image" id="clickableImage">
+    <div class="click-me" id="clickMeText">CLICK ME</div>
+</div>
+
+<div class="content">
+    <p>Welcome to my Vietnamese music page. Here, I'll be sharing videos and lyrics from my favourite Vietnamese singers.</p>
+    <hr>
+
+    <h2>My Favourite Singers</h2>
+    <ol>
+        <li>
+            Tlinh
+            <div class="singer-section">
+                <img src="img/tlinh-ai-Cover-Art.jpg" alt="Tlinh Album">
+                <video controls>
+                    <source src="tlinh.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+        <li>
+            VSTRA
+            <div class="singer-section">
+                <img src="img/VSTRA.jpeg" alt="VSTRA">
+                <video controls>
+                    <source src="VSTRA.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+        <li>
+            Liu Grace
+            <div class="singer-section">
+                <img src="img/liugrace.jpeg" alt="Liu Grace">
+                <video controls>
+                    <source src="liu.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+        <li>
+            WEAN
+            <div class="singer-section">
+                <img src="img/WEAN.jpg" alt="WEAN">
+                <video controls>
+                    <source src="WEAN.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+        <li>
+            Low G
+            <div class="singer-section">
+                <img src="img/Lowg.jpg" alt="Low G">
+                <video controls>
+                    <source src="ai.mp4" type="video/mp4">
+                </video>
+            </div>
+        </li>
+    </ol>
+</div>
+
+<!-- JavaScript to handle the interaction -->
+<script>
+    const clickableImage = document.getElementById('clickableImage');
+    const clickMeText = document.getElementById('clickMeText');
+    const content = document.querySelector('.content');
+
+    window.onload = function() {
+        if (localStorage.getItem('clicked') === 'true') {
+            clickableImage.style.display = 'none';
+            content.style.display = 'block';
+        }
+    }
+
+    clickableImage.addEventListener('click', function() {
+        clickableImage.style.display = 'none';
+        content.style.display = 'block';
+        localStorage.setItem('clicked', 'true');
+    });
+</script>
+
+&copy; gm
+
+</body>
+</html>

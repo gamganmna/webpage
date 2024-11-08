@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigator</title>
+    <link rel="icon" type="image/png" href="/img/flower.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #FEFAF9;
+            color: #CBC5C5;
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .background-image {
+            height: 50vh;
+            background: linear-gradient(rgba(254, 244, 245, 0.7), rgba(254, 244, 245, 0.7)), url('main.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #CBC5C5;
+        }
+
+        .background-image h1 {
+            font-family: 'Ballet', cursive;
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 250px;
+            border: 2px solid #CBC5C5;
+            border-radius: 5px;
+            background-color: #FEF4F5;
+            color: #CBC5C5;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .search-container button {
+            background-color: #CBC5C5;
+            color: #FEF4F5;
+            border: none;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .search-container button:hover {
+            background-color: #FEF4F5;
+            color: #CBC5C5;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .nav_item {
+            flex: 1;
+        }
+
+        a {
+            color: #CBC5C5;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #FEF4F5;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: 'Times New Roman', serif;
+        }
+
+        a:hover {
+            background-color: #CBC5C5;
+            color: #FEF4F5;
+        }
+
+        .content p {
+            font-size: 1.25em;
+            transition: transform 0.3s ease;
+            text-align: justify;
+            margin: 20px auto;
+            max-width: 800px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .content p:hover {
+            transform: scale(1.05);
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #CBC5C5;
+            margin: 30px 0;
+        }
+
+        .image-text-section {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 800px;
+            justify-content: center;
+        }
+
+        .image-text-section img {
+            width: 40%;
+            margin-right: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-text-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-text-section p {
+            font-size: 1.25em;
+            color: #CBC5C5;
+            text-align: justify;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .food-image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .food-image-container img {
+            width: 50%;
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .food-image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 80%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+
+        .why-vietnam-header {
+            font-family: 'Ballet', cursive;
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 40px;
+            color: #CBC5C5;
+        }
+
+        .hanoi-image-text-section {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .hanoi-image-text-section img {
+            width: 40%;
+            margin-left: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .hanoi-image-text-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .hanoi-image-text-section p {
+            font-size: 1.25em;
+            color: #CBC5C5;
+            text-align: justify;
+            font-family: 'Times New Roman', serif;
+        }
+
+        /* Feedback Title Styling */
+        .feedback-header {
+            font-family: 'Ballet', cursive;
+            font-size: 3em;
+            text-align: center;
+            margin-top: 40px;
+            color: #CBC5C5;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Feedback Input Styling */
+        .feedback-input-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .feedback-input {
+            padding: 10px;
+            font-size: 1.2em;
+            width: 300px;
+            border: 2px solid #CBC5C5;
+            border-radius: 5px;
+            background-color: #FEF4F5;
+            color: #CBC5C5;
+        }
+
+        .submit-feedback-btn {
+            background-color: #CBC5C5;
+            color: #FEF4F5;
+            border: none;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .submit-feedback-btn:hover {
+            background-color: #FEF4F5;
+            color: #CBC5C5;
+        }
+
+        /* Sticky Note Styling */
+        .sticky-notes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .sticky-note {
+            background-color: #FF69B4;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+            color: #fff;
+            position: relative;
+            max-width: 200px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .sticky-note button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .sticky-note button:hover {
+            color: #FEF4F5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image">
+    <header>
+        <h1>Vietnamese Life</h1>
+    </header>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for a page...">
+    <button onclick="searchPage()">🎀</button>
+</div>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul id="nav">
+        <li class="nav_item"><a href="index_nav.html">Home</a></li>
+        <li class="nav_item"><a href="music.html">Music</a></li>
+        <li class="nav_item"><a href="proverbs.html">Proverbs</a></li>
+        <li class="nav_item"><a href="unique_words.html">Unique Words</a></li>
+        <li class="nav_item"><a href
+            <li class="nav_item"><a href="culture.html">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <p>
+            Vietnam is a country where ancient traditions blend with modern life, offering a unique experience for every visitor. From the streets of Hanoi to the peaceful rice terraces of Sapa, Vietnam captivates with its stunning landscapes and rich cultural heritage. The country's history is deep and complex, shaped by thousands of years of dynasties, colonialism, and resilience. Sites like the ancient city of Hue and the Cu Chi Tunnels allow you to step back in time and explore Vietnam's fascinating past. Meanwhile, modern cities like Ho Chi Minh City light up with energy, reflecting the nation's rapid growth and bright future. Vietnam is also a culinary dream!
+        </p>
+    
+        <hr>
+    
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="nav.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    
+        <hr>
+    
+        <p>
+            Famous for dishes like pho and banh mi, Vietnam's diverse regional cuisine offers everything from fresh seafood to rich noodle soups. Street food vendors and high-end restaurants serve meals that showcase the country's vibrant ingredients and cooking traditions. Whether you're hiking in the mountains, cruising through the mystical Ha Long Bay, or exploring the Mekong Delta's floating markets, Vietnam's natural beauty never disappoints. It's a place where every corner has a story, and every visit leaves you with new memories.
+        </p>
+    
+        <div class="food-image-container">
+            <img src="food.jpeg" alt="Delicious Vietnamese Food">
+        </div>
+    
+        <div class="why-vietnam-header">
+            <h2>Why Vietnam?</h2>
+        </div>
+    
+        <div class="image-text-section">
+            <img src="fd.jpeg" alt="Famous for dishes">
+            <p>
+                Vietnam has become a must-see destination, offering incredible scenery, history, and a unique culture, and is home to eight UNESCO World Heritage Sites. From the ancient imperial city of Hue to the stunning limestone islands of Lan Ha Bay, these sites offer a glimpse into the country's past and natural beauty.
+            </p>
+        </div>
+    
+        <!-- New Hanoi Section -->
+        <div class="hanoi-image-text-section">
+            <p>
+                Hanoi, the capital of Vietnam, blends tradition with modern life. At its core is the Old Quarter, where centuries-old architecture, bustling streets, and vibrant markets. "Dubbed the 'Paris of the East', Hanoi is a sightseer's paradise for its landmarks with French influences mixed with Vietnamese motifs. This metropolis is jam-packed with attractions that cater to tourists of all tastes," he wrote in the travelogue titled "Beyond Hanoi: 10 Most Scenic Towns In Vietnam. In fact, Hanoi is the only city in Vietnam where you can find old French-style streets. The capital has an Old Quarter of 36 streets with thousands of roofed houses that have existed since its initial establishment, creating a unique beauty.
+            </p>
+            <img src="hanoi.jpg" alt="Hanoi cityscape">
+        </div>
+    
+        <!-- Feedback Section -->
+        <div class="feedback-header">
+            Feedback
+        </div>
+    
+        <div class="feedback-input-container">
+            <input type="text" id="feedbackInput" class="feedback-input" placeholder="Leave your feedback here...">
+            <button class="submit-feedback-btn" onclick="addStickyNote()">Submit</button>
+        </div>
+    
+        <!-- Sticky Notes Section -->
+        <div class="sticky-notes-container" id="stickyNotesContainer">
+            <!-- Sticky notes will be dynamically added here -->
+        </div>
+    
+    </div>
+    
+    <footer>
+        <p style="text-align: center; color: #CBC5C5; margin-top: 40px;">
+            &copy; gm
+        </p>
+    </footer>
+    
+    <script>
+        // Function to add a sticky note with the feedback
+        function addStickyNote() {
+            const feedbackInput = document.getElementById('feedbackInput');
+            const feedbackText = feedbackInput.value;
+    
+            if (feedbackText.trim() !== "") {
+                const stickyNote = document.createElement('div');
+                stickyNote.classList.add('sticky-note');
+    
+                const stickyNoteContent = document.createElement('p');
+                stickyNoteContent.textContent = feedbackText;
+                stickyNote.appendChild(stickyNoteContent);
+    
+                // Create delete button for the sticky note
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'X';
+                deleteButton.onclick = function () {
+                    stickyNote.remove();
+                    saveStickyNotes(); // Save the current state
+                };
+                stickyNote.appendChild(deleteButton);
+    
+                // Add the sticky note to the container
+                const stickyNotesContainer = document.getElementById('stickyNotesContainer');
+                stickyNotesContainer.appendChild(stickyNote);
+    
+                // Save sticky notes to localStorage
+                saveStickyNotes();
+    
+                // Clear the input field after submission
+                feedbackInput.value = "";
+            } else {
+                alert('Please enter feedback before submitting.');
+            }
+        }
+    
+        // Function to load sticky notes from localStorage
+        function loadStickyNotes() {
+            const storedStickyNotes = JSON.parse(localStorage.getItem('stickyNotes')) || [];
+            storedStickyNotes.forEach(noteText => {
+                const stickyNote = document.createElement('div');
+                stickyNote.classList.add('sticky-note');
+    
+                const stickyNoteContent = document.createElement('p');
+                stickyNoteContent.textContent = noteText;
+                stickyNote.appendChild(stickyNoteContent);
+    
+                // Create delete button for the sticky note
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'X';
+                deleteButton.onclick = function () {
+                    stickyNote.remove();
+                    saveStickyNotes(); // Save the current state
+                };
+                stickyNote.appendChild(deleteButton);
+    
+                // Add the sticky note to the container
+                const stickyNotesContainer = document.getElementById('stickyNotesContainer');
+                stickyNotesContainer.appendChild(stickyNote);
+            });
+        }
+    
+        // Function to save sticky notes to localStorage
+        function saveStickyNotes() {
+            const stickyNotesContainer = document.getElementById('stickyNotesContainer');
+            const stickyNotes = Array.from(stickyNotesContainer.children).map(stickyNote => {
+                return stickyNote.querySelector('p').textContent;
+            });
+            localStorage.setItem('stickyNotes', JSON.stringify(stickyNotes));
+        }
+    
+        // Load sticky notes when the page is loaded
+        window.onload = function () {
+            loadStickyNotes();
+        };
+    </script>
+    
+    </body>
+    </html>
